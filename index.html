@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shovendu Biswas — Environmental &amp; Sustainability Engineer</title>
+<meta name="description" content="Shovendu Biswas — Environmental & Sustainability Engineer specializing in ETP, WTP, MBR, ZLD, and RO systems." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg: #E6EEE3;
+    --surface: #F0F6ED;
+    --surface-2: #DCE7D8;
+    --ink: #142019;
+    --ink-soft: #243A2E;
+    --ink-faint: #4F6357;
+    --moss: #4F7444;
+    --water: #2E6B64;
+    --sand: #A37C3F;
+    --line: #C7D7C1;
+    --shadow: 0 20px 50px -30px rgba(20,32,25,0.3);
+    --maxw: 1080px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .mono{
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Skip / focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--moss);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+  }
+  .skip-link:focus{
+    left: 16px; top:16px; z-index: 999;
+    background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 6px;
+  }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    background: rgba(230,238,227,0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease, background .3s ease;
+  }
+  .nav.scrolled{
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 16px 32px;
+    display:flex; align-items:center; justify-content: space-between;
+  }
+  .nav-brand{
+    font-family:'Fraunces', serif; font-size: 1.3rem; font-weight: 500;
+  }
+  .nav-brand span{ color: var(--moss); }
+  .nav-links{
+    display:flex; gap: 28px; list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    transition: color .2s ease;
+  }
+  .nav-links a:hover{ color: var(--moss); }
+  .nav-links a.active{
+    color: var(--moss);
+    font-weight: 600;
+  }
+  .nav-toggle{ display:none; }
+
+  @media (max-width: 720px){
+    .nav-links{
+      position: fixed; top: 60px; right: 0; left:0;
+      flex-direction: column; gap: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .nav-links.open{ max-height: 360px; }
+    .nav-links li{ width:100%; }
+    .nav-links a{
+      display:block; padding: 14px 32px; border-bottom: 1px solid var(--line);
+    }
+    .nav-toggle{
+      display:block; background:none; border:none; cursor:pointer;
+      font-family:'JetBrains Mono', monospace; font-size: .75rem; letter-spacing:.05em;
+      color: var(--ink); padding: 6px 10px; border:1px solid var(--line); border-radius: 6px;
+    }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    display:block;
+    overflow: hidden;
+    padding: 110px 0 0;
+    background: linear-gradient(180deg, #EEF4EB 0%, #E5EFE2 45%, #DAE6D6 100%);
+  }
+  #bubbleCanvas{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    z-index: 1;
+    opacity: 0.9;
+  }
+  #bubbleCanvasContact{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .hero-content{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--water);
+    margin-bottom: 14px;
+    display:flex; align-items:center; gap: 10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width: 26px; height:1px; background: var(--water);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size: clamp(1.9rem, 4.2vw, 3rem);
+    line-height: 1.12;
+    margin-bottom: 14px;
+    color: var(--ink);
+    max-width: 760px;
+  }
+  .hero h1 em{
+    font-style: italic;
+    color: var(--moss);
+  }
+  .hero p.lede{
+    max-width: 560px;
+    font-size: 1.0rem;
+    color: var(--ink-soft);
+    margin-bottom: 26px;
+  }
+  .hero-cta{
+    display:flex; gap: 16px; flex-wrap: wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap: 8px;
+    padding: 13px 24px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border: 1px solid var(--ink);
+    cursor: pointer;
+    transition: all .25s ease;
+    background: transparent;
+  }
+  .btn-primary{
+    background: var(--ink); color: var(--bg); border-color: var(--ink);
+  }
+  .btn-primary:hover{ background: var(--moss); border-color: var(--moss); }
+  .btn-ghost:hover{ background: var(--ink); color: var(--bg); }
+
+  .scroll-cue{
+    position:absolute; bottom: 36px; left: 32px;
+    z-index: 2;
+  }
+  .scroll-cue .line{
+    width:1px; height: 34px; background: var(--ink-faint);
+    position:relative; overflow:hidden;
+    display:block;
+  }
+  .scroll-cue .line::after{
+    content:''; position:absolute; left:0; top:-100%; width:100%; height:100%;
+    background: var(--moss);
+    animation: scrollline 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollline{
+    0%{ top:-100%; } 50%{ top:0%; } 100%{ top:100%; }
+  }
+
+  /* ---------- Water flow ambient animation (per section) ---------- */
+  .section-wave{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 60px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section-wave .wl{
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat-x;
+  }
+  .section-wave .wl:nth-child(1){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 60'%3E%3Cpath d='M0,20 C 60,15 60,25 120,20 C 180,15 180,25 240,20' stroke='%23B7CCBC' stroke-width='1.15' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 240px 60px;
+    animation: waveL2R 42s linear infinite;
+  }
+  .section-wave .wl:nth-child(2){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 60'%3E%3Cpath d='M0,31 C 72,25 72,37 145,31 C 217,25 217,37 290,31' stroke='%2385A195' stroke-width='1.15' fill='none' opacity='0.42'/%3E%3C/svg%3E");
+    background-size: 290px 60px;
+    animation: waveR2L 34s linear infinite;
+  }
+  .section-wave .wl:nth-child(3){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 60'%3E%3Cpath d='M0,42 C 65,36 65,48 130,42 C 195,36 195,48 260,42' stroke='%2351756C' stroke-width='1.15' fill='none' opacity='0.5'/%3E%3C/svg%3E");
+    background-size: 260px 60px;
+    animation: waveL2R 48s linear infinite;
+  }
+  .section-wave .wl:nth-child(4){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 60'%3E%3Cpath d='M0,52 C 75,48 75,56 150,52 C 225,48 225,56 300,52' stroke='%231F4A45' stroke-width='1.15' fill='none' opacity='0.6'/%3E%3C/svg%3E");
+    background-size: 300px 60px;
+    animation: waveR2L 30s linear infinite;
+  }
+
+  .section-wave.light .wl:nth-child(1){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 60'%3E%3Cpath d='M0,20 C 60,15 60,25 120,20 C 180,15 180,25 240,20' stroke='%23F0F6ED' stroke-width='1.15' fill='none' opacity='0.18'/%3E%3C/svg%3E");
+  }
+  .section-wave.light .wl:nth-child(2){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 290 60'%3E%3Cpath d='M0,31 C 72,25 72,37 145,31 C 217,25 217,37 290,31' stroke='%23F0F6ED' stroke-width='1.15' fill='none' opacity='0.28'/%3E%3C/svg%3E");
+  }
+  .section-wave.light .wl:nth-child(3){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 60'%3E%3Cpath d='M0,42 C 65,36 65,48 130,42 C 195,36 195,48 260,42' stroke='%23F0F6ED' stroke-width='1.15' fill='none' opacity='0.36'/%3E%3C/svg%3E");
+  }
+  .section-wave.light .wl:nth-child(4){
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 60'%3E%3Cpath d='M0,52 C 75,48 75,56 150,52 C 225,48 225,56 300,52' stroke='%23F0F6ED' stroke-width='1.15' fill='none' opacity='0.46'/%3E%3C/svg%3E");
+  }
+
+  @keyframes waveL2R{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+  @keyframes waveR2L{
+    from{ transform: translateX(-50%); }
+    to{ transform: translateX(0); }
+  }
+
+  /* ---------- Subtle ambient bubbles (non-hero sections) ---------- */
+  .section-bubbles{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section-bubbles .b{
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), rgba(255,255,255,0) 65%);
+    opacity: 0.3;
+    animation: bubbleFloat 11s ease-in-out infinite alternate;
+  }
+  .section-bubbles .b:nth-child(1){ width: 46px; height: 46px; top: 14%; left: 6%; animation-duration: 13s; }
+  .section-bubbles .b:nth-child(2){ width: 26px; height: 26px; top: 64%; left: 88%; animation-duration: 9s; animation-delay: 1.2s; }
+  .section-bubbles .b:nth-child(3){ width: 18px; height: 18px; top: 30%; left: 52%; animation-duration: 8s; animation-delay: 2.4s; }
+  .section-bubbles .b:nth-child(4){ width: 34px; height: 34px; top: 78%; left: 28%; animation-duration: 12s; animation-delay: 0.6s; }
+  .section-bubbles.dark .b{
+    background: radial-gradient(circle at 32% 28%, rgba(255,255,255,0.4), rgba(255,255,255,0) 65%);
+    opacity: 0.22;
+  }
+  @keyframes bubbleFloat{
+    from{ transform: translateY(0); }
+    to{ transform: translateY(-16px); }
+  }
+
+  /* ---------- Sections generic ---------- */
+  section{
+    padding: 34px 0 50px;
+    position: relative;
+  }
+  .section-head{
+    display:flex; justify-content: space-between; align-items: flex-end;
+    gap: 24px; margin-bottom: 22px; flex-wrap: wrap;
+  }
+  .section-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.78rem; color: var(--ink-faint);
+    letter-spacing: .08em;
+  }
+  .section-head h2{
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  }
+  .section-sub{
+    max-width: 480px;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{
+    opacity: 1; transform: translateY(0);
+  }
+
+  /* ---------- About (now part of the merged hero section) ---------- */
+  .about-grid{
+    position: relative;
+    z-index: 2;
+    display:grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: center;
+    margin-top: 36px;
+    padding-bottom: 76px;
+  }
+  .about-photo-frame{
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+      linear-gradient(165deg, #DCE9D7 0%, #C9DEC3 45%, #AFCDB0 100%);
+    display:flex; flex-direction: column; align-items:center; justify-content:center;
+    gap: 10px;
+    color: #3F5448;
+    box-shadow: var(--shadow);
+  }
+  .about-photo-frame .frame-waves{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 70%;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .about-photo-frame .frame-waves svg{
+    width: 100%; height: 100%;
+    opacity: 1;
+  }
+  .about-photo-frame .frame-icon{
+    position: relative;
+    z-index: 2;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    display:flex; align-items:center; justify-content:center;
+    backdrop-filter: blur(2px);
+  }
+  .about-photo-frame svg{ opacity: 0.85; }
+  .about-photo-frame span{
+    position: relative;
+    z-index: 2;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.7rem; letter-spacing: .07em; text-transform: uppercase;
+    color: #2E4A3A;
+  }
+  .about-text p{
+    font-size: 1.15rem;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+  }
+  @media (max-width: 800px){
+    .about-grid{ grid-template-columns: 1fr; gap: 28px; }
+    .about-photo-frame{ aspect-ratio: 16/10; max-width: 320px; }
+  }
+
+  /* ---------- Compact experience summary ---------- */
+  .exp-summary{
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    background: var(--surface);
+  }
+  .exp-summary-item{
+    padding: 16px 20px;
+    border-right: 1px solid var(--line);
+  }
+  .exp-summary-item:last-child{ border-right: none; }
+  .exp-summary-cap{
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.45rem;
+    color: #1F5650;
+    white-space: nowrap;
+  }
+  .exp-summary-cap sub{ font-size: 0.76rem; font-weight: 500; color: var(--ink-faint); }
+  .exp-summary-name{
+    font-size: 0.84rem; color: var(--ink); font-weight: 500; margin-top: 4px;
+  }
+  @media (max-width: 720px){
+    .exp-summary{ grid-template-columns: 1fr; }
+    .exp-summary-item{ border-right: none; border-bottom: 1px solid var(--line); }
+    .exp-summary-item:last-child{ border-bottom: none; }
+  }
+
+  /* ---------- Expertise ---------- */
+  .expertise-grid{
+    display:grid; grid-template-columns: 1fr; gap: 14px;
+    margin-bottom: 30px;
+  }
+  .expertise-card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px 28px;
+  }
+  .expertise-card h3{
+    font-size: 1.08rem; margin-bottom: 10px;
+    display:flex; align-items:baseline; gap: 10px;
+  }
+  .expertise-card ul{
+    margin:0; padding:0; list-style:none;
+  }
+  .expertise-card li{
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 6px;
+    font-size: 0.87rem;
+    line-height: 1.42;
+    color: var(--ink-soft);
+  }
+  .expertise-card li::before{
+    content:''; position:absolute; left:0; top: 8px;
+    width: 6px; height: 1px; background: var(--moss);
+  }
+  .expertise-card li strong{ color: var(--ink); font-weight: 500; }
+
+  /* ---------- Achievements ---------- */
+  .achievements{
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    padding: 22px 28px;
+    margin-bottom: 26px;
+  }
+  .achievements h3{
+    font-size: 1.08rem;
+    margin: 0 0 10px;
+  }
+  .achievements ul{ margin:0; padding:0; list-style:none; }
+  .achievements li{
+    display:flex; align-items:flex-start; gap: 10px;
+    font-size: 0.87rem;
+    line-height: 1.42;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .achievements li:last-child{ margin-bottom: 0; }
+  .achievements li::before{
+    content: '✓';
+    color: var(--water);
+    font-weight: 600;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  /* ---------- Toolkit ---------- */
+  .toolkit-group{
+    display:flex; align-items:flex-start; gap: 16px;
+    margin-bottom: 12px;
+  }
+  .toolkit-group h4{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.72rem; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0;
+    padding-top: 7px;
+    flex: 0 0 140px;
+    font-weight: 400;
+  }
+  .chip-row{ display:flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+  .chip{
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    border-radius: 7px;
+    background: var(--surface-2);
+    color: var(--ink);
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  @media (max-width: 600px){
+    .toolkit-group{ flex-direction: column; gap: 6px; }
+    .toolkit-group h4{ flex-basis: auto; padding-top: 0; }
+  }
+
+  /* ---------- Linkout cards (handbook / calculators) ---------- */
+  .linkout-grid{
+    display:flex; flex-direction: column; gap: 14px;
+  }
+  .linkout-card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+  }
+  .linkout-card.split{
+    display:flex; gap: 22px; align-items: center;
+  }
+  .linkout-cover{
+    flex: 0 0 90px;
+    aspect-ratio: 3/4;
+    border: 1.5px dashed var(--line);
+    border-radius: 10px;
+    background: var(--surface-2);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap: 6px;
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 6px;
+  }
+  .linkout-cover svg{ opacity: 0.7; }
+  .linkout-cover span{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.6rem; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .linkout-body{ flex: 1; min-width: 0; }
+  .linkout-row{
+    display:flex; align-items: center; gap: 14px;
+  }
+  .linkout-icon{
+    width: 38px; height: 38px;
+    flex: 0 0 38px;
+    border-radius: 9px;
+    background: var(--surface-2);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .linkout-card h3{ font-size: 1.12rem; margin: 0 0 4px; }
+  .linkout-card p{ color: var(--ink-soft); font-size: 0.9rem; margin: 6px 0 12px; }
+  .badge{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.65rem; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--sand);
+    border: 1px solid var(--sand);
+    padding: 3px 9px;
+    border-radius: 999px;
+    width: fit-content;
+    display:inline-block;
+    margin-bottom: 8px;
+  }
+  .linkout-action{
+    font-size: 0.86rem; font-weight: 500;
+    display:inline-flex; align-items:center; gap: 8px;
+    color: var(--water);
+  }
+  @media (max-width: 560px){
+    .linkout-card.split{ flex-direction: column; align-items: flex-start; }
+    .linkout-cover{ flex-basis: auto; width: 90px; }
+  }
+
+  /* ---------- Publications ---------- */
+  .stack-item{
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stack-item:first-child{ padding-top: 0; }
+  .stack-item h4{
+    font-size: 1.0rem; font-weight: 500; margin-bottom: 6px; line-height: 1.4;
+  }
+  .stack-item .meta{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.76rem; color: var(--ink-faint);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background-color: var(--ink);
+    background-image:
+      repeating-linear-gradient(0deg, rgba(244,246,242,0.035) 0px, rgba(244,246,242,0.035) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(244,246,242,0.035) 0px, rgba(244,246,242,0.035) 1px, transparent 1px, transparent 40px);
+    color: var(--bg);
+  }
+  .contact h2{ color: var(--bg); }
+  .contact .section-sub{ color: #B9C8BE; max-width: 460px; }
+  .contact-eyebrow{
+    display:flex; align-items:center; gap: 10px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.76rem; letter-spacing: .1em; text-transform: uppercase;
+    color: #8FA697;
+    margin-bottom: 12px;
+    position: relative; z-index: 2;
+  }
+  .status-dot{
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #6FCF8E;
+    flex-shrink: 0;
+    animation: statusPulse 2.4s ease-out infinite;
+  }
+  @keyframes statusPulse{
+    0%{ box-shadow: 0 0 0 0 rgba(111,207,142,0.55); }
+    70%{ box-shadow: 0 0 0 7px rgba(111,207,142,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(111,207,142,0); }
+  }
+  .contact-grid{
+    display:grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(111,166,140,0.16);
+    border-radius: 14px;
+    overflow: visible;
+    margin-top: 18px;
+    position: relative;
+    z-index: 2;
+  }
+  .contact-grid > .contact-item:first-child{ border-top-left-radius: 14px; }
+  .contact-grid > .contact-item:nth-child(2){ border-top-right-radius: 14px; }
+  .contact-grid > .contact-item:nth-last-child(2){ border-bottom-left-radius: 14px; }
+  .contact-grid > .contact-item:last-child{ border-bottom-right-radius: 14px; }
+  .contact-item{ overflow: hidden; }
+  .corner{
+    position: absolute;
+    width: 13px; height: 13px;
+    pointer-events: none;
+  }
+  .corner-tl{ top: -1px; left: -1px; border-top: 1.5px solid #6FA68C; border-left: 1.5px solid #6FA68C; }
+  .corner-tr{ top: -1px; right: -1px; border-top: 1.5px solid #6FA68C; border-right: 1.5px solid #6FA68C; }
+  .corner-bl{ bottom: -1px; left: -1px; border-bottom: 1.5px solid #6FA68C; border-left: 1.5px solid #6FA68C; }
+  .corner-br{ bottom: -1px; right: -1px; border-bottom: 1.5px solid #6FA68C; border-right: 1.5px solid #6FA68C; }
+  .contact-item{
+    background: rgba(8,16,13,0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 13px 16px;
+    display:flex; align-items:flex-start; gap: 10px;
+  }
+  .contact-icon{
+    width: 28px; height: 28px;
+    flex: 0 0 28px;
+    border-radius: 8px;
+    background: rgba(244,246,242,0.08);
+    display:flex; align-items:center; justify-content:center;
+    color: #8FA697;
+  }
+  .contact-icon svg{ width: 14px; height: 14px; }
+  .contact-item-body{ flex: 1; min-width: 0; }
+  .contact-item .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.66rem; letter-spacing: .07em; text-transform: uppercase;
+    color: #8FA697;
+    margin-bottom: 3px;
+  }
+  .contact-item .label::before{
+    content: '// ';
+    opacity: 0.6;
+  }
+  .contact-item a, .contact-item .value{
+    font-family:'Fraunces', serif;
+    font-size: 0.98rem;
+    color: var(--bg);
+    display: block;
+  }
+  .contact-item a{
+    border-bottom: 1px solid rgba(244,246,242,0.25);
+    padding-bottom: 1px;
+    transition: opacity .2s ease;
+  }
+  .contact-item a:hover{ opacity: 0.7; }
+  .contact-item .whatsapp-note{
+    display:inline-flex; align-items:center; gap: 5px;
+    margin-top: 5px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: #8FA697;
+    border-bottom: none !important;
+  }
+  .contact-item .whatsapp-note:hover{ opacity: 0.75; }
+  @media (max-width: 640px){
+    .contact-grid{ grid-template-columns: 1fr; }
+  }
+
+  footer{
+    background: var(--ink);
+    color: #8DA08F;
+    text-align: center;
+    padding: 24px 0 36px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    letter-spacing: .04em;
+  }
+
+  /* ---------- Cursor water-wake effect ---------- */
+  #cursorFX{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    .reveal{ transition: none; opacity: 1; transform: none; }
+    .scroll-cue .line::after{ animation: none; }
+    .section-wave .wl{ animation: none; }
+    .section-bubbles .b{ animation: none; }
+    .status-dot{ animation: none; }
+    #cursorFX{ display: none; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="cursorFX" aria-hidden="true"></canvas>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Shovendu <span>Biswas</span></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENU</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#handbook">Work &amp; Resources</a></li>
+      <li><a href="#plants">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO + ABOUT (merged into one continuous section) -->
+  <section class="hero" id="hero">
+    <canvas id="bubbleCanvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-content">
+      <div class="eyebrow">Wastewater and Sustainability Engineer</div>
+      <h1>Turning industrial wastewater into <em>clean, reusable water.</em></h1>
+    </div>
+    <div class="wrap about-grid" id="about">
+      <div class="about-photo-frame reveal" id="aboutPhotoFrame">
+        <svg class="frame-waves" viewBox="0 0 200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,90 C30,70 50,110 80,90 C110,70 130,110 160,90 C175,80 190,85 200,90 L200,240 L0,240 Z" fill="#9DC09E" opacity="0.55"/>
+          <path d="M0,130 C25,115 55,145 90,130 C120,117 145,148 175,132 C185,127 195,130 200,133 L200,240 L0,240 Z" fill="#7FAE85" opacity="0.55"/>
+          <path d="M0,170 C35,158 60,182 95,170 C125,160 150,185 200,172 L200,240 L0,240 Z" fill="#5E9468" opacity="0.6"/>
+        </svg>
+        <div class="frame-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M21 16l-5-4-4 3-3-2-5 4"/></svg>
+        </div>
+        <span>Photo coming soon</span>
+      </div>
+      <div class="about-text reveal">
+        <p>I completed my B.Sc. in Applied Chemistry and Chemical Engineering and M.Sc. in Environmental Science from Jahangirnagar University. During my academic years I conducted research on industrial wastewater treatment and published findings in peer-reviewed international journals. I then began my journey in wastewater treatment plants in textile industries — nearly five years across ETP, WTP, MBR, RO and ZLD operation and management. My goal is to reduce water pollution from Bangladeshi industries as much as possible.</p>
+      </div>
+    </div>
+    <div class="section-wave" aria-hidden="true"><div class="wl"></div><div class="wl"></div><div class="wl"></div><div class="wl"></div></div>
+  </section>
+
+  <!-- HANDBOOK + CALCULATORS -->
+  <section id="handbook" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="section-wave" aria-hidden="true"><div class="wl"></div><div class="wl"></div><div class="wl"></div><div class="wl"></div></div>
+    <div class="section-bubbles" aria-hidden="true"><span class="b"></span><span class="b"></span><span class="b"></span><span class="b"></span></div>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>Work and resources</h2>
+        </div>
+      </div>
+
+      <div class="linkout-grid reveal">
+
+        <div class="linkout-card split">
+          <div class="linkout-cover" id="handbookCover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 3v18"/></svg>
+            <span>Cover coming soon</span>
+          </div>
+          <div class="linkout-body">
+            <h3>ETP Operation &amp; Management Handbook</h3>
+            <p>A practical technical handbook covering the complete operation and management of industrial wastewater treatment plants. It includes all wastewater treatment processes, biological treatment (ASP, MBR, MBBR, SBR, UASB), chemical treatment, DAF, RO, ZLD, process calculations (MLSS, SVI, SRT, F/M, HRT, RAS), troubleshooting, equipment selection, and operational best practices for efficient, compliant, and sustainable plant performance.</p>
+            <a href="https://www.linkedin.com/posts/shovendu-acce_etp-operation-management-handbook-ugcPost-7470478971453956097-QQUA/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGpxmXQBRwWka6KCMsZAFTA_duGL48MGZ6Q" id="handbookLink" class="linkout-action" target="_blank" rel="noopener">View on LinkedIn →</a>
+          </div>
+        </div>
+
+        <div class="linkout-card split">
+          <div class="linkout-cover" id="calcCover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2"/></svg>
+            <span>Cover coming soon</span>
+          </div>
+          <div class="linkout-body">
+            <span class="badge">Link coming soon</span>
+            <h3>ETP Calculators</h3>
+            <p>Working calculators for everyday ETP operations — dosing, retention time, and process ratios.</p>
+            <a href="#" id="calcLink" class="linkout-action">Open Calculators →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE & EXPERTISE -->
+  <section id="plants">
+    <div class="section-wave" aria-hidden="true"><div class="wl"></div><div class="wl"></div><div class="wl"></div><div class="wl"></div></div>
+    <div class="section-bubbles" aria-hidden="true"><span class="b"></span><span class="b"></span><span class="b"></span><span class="b"></span></div>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>Experience and expertise</h2>
+        </div>
+      </div>
+
+      <div class="exp-summary reveal">
+        <div class="exp-summary-item">
+          <div class="exp-summary-cap">480<sub> m³/d</sub></div>
+          <div class="exp-summary-name">Bio-Chemical MBR Recycle Plant</div>
+        </div>
+        <div class="exp-summary-item">
+          <div class="exp-summary-cap">8,400<sub> m³/d</sub></div>
+          <div class="exp-summary-name">Biological Plant with DAF unit</div>
+        </div>
+        <div class="exp-summary-item">
+          <div class="exp-summary-cap">9,600<sub> m³/d</sub></div>
+          <div class="exp-summary-name">Biological · DAF · ZLD · UF · RO — Commissioning &amp; Erection</div>
+        </div>
+      </div>
+
+      <div class="expertise-grid reveal">
+        <div class="expertise-card">
+          <h3>ETP and WTP Operation</h3>
+          <ul>
+            <li>In-charge of <strong>480 m³/day Bio-Chemical MBR Recycle Plant</strong> and <strong>8,400 m³/day Biological Plant with DAF unit</strong></li>
+            <li>Monitored parameters: <strong>pH, DO, COD, BOD₅, TDS, TSS, MLSS, SVI, F/M ratio</strong>, microorganism activity</li>
+            <li>Sludge management, sludge disposal, aeration control, and biological process stabilization</li>
+            <li>Prepared daily and monthly ETP reports including water balance, costing, and recycled-water utilization</li>
+            <li>Commissioning, erection, and installation of new ETP with detailed P&amp;ID analysis and process validation</li>
+            <li>Designed and developed a complete full-scale ETP 3D plant model in <strong>Autodesk Revit</strong> covering coagulation, flocculation, DAF, biological, MBR, RO, and ZLD units</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h3>Sustainability and Regulatory Compliance</h3>
+          <ul>
+            <li>Maintained and managed all documentation for environmental audits and compliance programs conducted by third parties and buyers, including GTW and H&amp;M performance data and ETP assessments</li>
+            <li>Coordinated and facilitated third-party buyer audits — H&amp;M, Next, Inditex, Zara, C&amp;A, HBI</li>
+            <li>Maintained compliance with the local regulatory body (<strong>DoE</strong>) and global platforms (<strong>ZDHC, Higg FEM – Worldly</strong>), while ensuring certifications including GOTS, GTW, BSCI, GRS, RCS, and OCS</li>
+            <li>Tracked GHG emissions, 3R waste-reduction targets, and sustainability KPIs; prepared sustainability reports</li>
+            <li>Achieved <strong>Green Certification</strong> via BluWin H&amp;M ETP assessment</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h3>Chemical Management System (CMS)</h3>
+          <ul>
+            <li>Familiar with chemical management platforms including <strong>BVE3, BHive, CleanChain, and ZDHC InCheck Gateway</strong> for chemical transparency and RSL/MRSL compliance</li>
+            <li>Maintained updated MSDS documentation and ensured proper chemical labeling and safe storage</li>
+          </ul>
+        </div>
+        <div class="expertise-card">
+          <h3>Research and Development</h3>
+          <ul>
+            <li>Conducted research on wastewater treatment, process optimization, and data analysis</li>
+            <li>Contributed to peer-reviewed publications in wastewater treatment and adsorption studies</li>
+            <li>Assisted in writing research proposals, preparing technical reports, and scientific publications</li>
+            <li>Proficient in process simulation and 3D modeling tools including AutoCAD, Revit, and SolidWorks for plant design</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="achievements reveal">
+        <h3>Achievements</h3>
+        <ul>
+          <li>Achieved Green Certification from H&amp;M ETP Assessment</li>
+          <li>Reduced chemical and energy consumption by approximately 15%</li>
+          <li>Zero accidents under my supervision</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <div class="toolkit-group">
+          <h4>Compliance Platforms</h4>
+          <div class="chip-row">
+            <span class="chip">ZDHC</span><span class="chip">Higg FEM (Worldly)</span><span class="chip">DoE</span>
+            <span class="chip">GOTS</span><span class="chip">BSCI</span><span class="chip">GRS</span>
+            <span class="chip">RCS</span><span class="chip">OCS</span>
+          </div>
+        </div>
+        <div class="toolkit-group">
+          <h4>Chemical Management</h4>
+          <div class="chip-row">
+            <span class="chip">BVE3</span><span class="chip">BHive</span><span class="chip">CleanChain</span><span class="chip">ZDHC InCheck</span>
+          </div>
+        </div>
+        <div class="toolkit-group" style="margin-bottom:0;">
+          <h4>Design and Modeling</h4>
+          <div class="chip-row">
+            <span class="chip">AutoCAD</span><span class="chip">Revit</span><span class="chip">SolidWorks</span>
+            <span class="chip">MATLAB</span><span class="chip">Visio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-wave" aria-hidden="true"><div class="wl"></div><div class="wl"></div><div class="wl"></div><div class="wl"></div></div>
+    <div class="section-bubbles" aria-hidden="true"><span class="b"></span><span class="b"></span><span class="b"></span><span class="b"></span></div>
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:24px;">
+        <div>
+          <h2 style="font-size:1.6rem;">Research</h2>
+        </div>
+      </div>
+      <div class="reveal" style="max-width:680px;">
+        <div class="stack-item">
+          <h4>Removal of aqueous methylene blue dye over Vallisneria natans biosorbent using artificial neural network and statistical response surface methodology analysis</h4>
+          <div class="meta">Journal of Molecular Liquids · 2024</div>
+        </div>
+        <div class="stack-item">
+          <h4>Removal of organic micro-pollutants by aerobic and anaerobic microorganisms</h4>
+          <div class="meta">Elsevier</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <canvas id="bubbleCanvasContact" aria-hidden="true"></canvas>
+    <div class="section-wave light" aria-hidden="true"><div class="wl"></div><div class="wl"></div><div class="wl"></div><div class="wl"></div></div>
+    <div class="wrap">
+      <div class="contact-eyebrow"><span class="status-dot"></span>Available for new projects and collaborations</div>
+      <h2 style="margin: 0 0 10px; font-size: clamp(1.8rem, 3.4vw, 2.4rem);">Open for suggestions, collaboration and opportunities.</h2>
+      <p class="section-sub">Always glad to connect with anyone working toward cleaner industrial water in Bangladesh.</p>
+
+      <div class="contact-grid">
+        <span class="corner corner-tl"></span>
+        <span class="corner corner-tr"></span>
+        <span class="corner corner-bl"></span>
+        <span class="corner corner-br"></span>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="label">Email</div>
+            <a href="mailto:s.b.a.suvendu@gmail.com">s.b.a.suvendu@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.6 10.8c1.6 3.2 4.4 6 7.6 7.6l2.6-2.6c.3-.3.8-.4 1.2-.3 1.3.4 2.7.6 4 .6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C11 22 2 13 2 2.9c0-.6.4-1 1-1h3.7c.6 0 1 .4 1 1 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2L6.6 10.8z"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="label">Phone</div>
+            <a href="tel:+8801883879967">+880 1883 879967</a>
+            <a href="https://wa.me/8801883879967" target="_blank" rel="noopener" class="whatsapp-note">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.4 5.09L2 22l5.2-1.48c1.45.79 3.1 1.24 4.84 1.24 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.78 14.13c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.12.11-1.81-.11-.42-.13-.95-.3-1.65-.6-2.9-1.25-4.8-4.16-4.94-4.36-.15-.2-1.18-1.57-1.18-3 0-1.42.74-2.12 1-2.41.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.15.07.15.12.33.02.52-.1.2-.16.32-.31.49-.15.18-.32.4-.46.53-.15.15-.3.31-.13.61.18.3.81 1.34 1.74 2.17 1.2 1.07 2.21 1.4 2.52 1.56.31.15.49.13.67-.05.18-.18.78-.91.99-1.22.21-.31.42-.26.71-.16.29.1 1.83.86 2.14 1.02.31.15.52.23.6.36.07.13.07.74-.17 1.42z"/></svg>
+              Also on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7.2v.01M12 17v-4.5c0-1.5 1-2.5 2.3-2.5 1.3 0 2.2 1 2.2 2.5V17"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/shovendu-acce/" target="_blank" rel="noopener">Shovendu Biswas ↗</a>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.4 7-12.5C19 5.9 15.9 3 12 3S5 5.9 5 9.5C5 14.6 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <div class="label">Location</div>
+            <div class="value">Chandra, Gazipur, Bangladesh</div>
+            <div class="whatsapp-note" style="cursor:default;">24.0022° N, 90.4147° E</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© <span id="year"></span> Shovendu Biswas — Environmental &amp; Sustainability Engineer</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav scroll state + mobile toggle
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', false);
+  }));
+
+  // Reveal on scroll
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  // Cursor water-ripple effect: the page is water, the cursor disturbs it
+  // like a stone dropped in — a soft concentric ring blooms outward at a
+  // low, gentle frequency while the pointer moves, then fades away.
+  if (!reduced) {
+    const fxCanvas = document.getElementById('cursorFX');
+    if (fxCanvas) {
+      const fxCtx = fxCanvas.getContext('2d');
+      let fxW, fxH, fxDpr;
+      let ripples = []; // {x, y, age}
+      const MAX_AGE = 95;        // frames a ripple lives — slower fade
+      const MAX_RADIUS = 52;     // smaller radius
+      const SPAWN_INTERVAL = 230; // ms between ripple spawns — slightly less frequent
+      let lastSpawn = 0;
+      let lastX = null, lastY = null;
+
+      function fxResize(){
+        fxDpr = Math.min(window.devicePixelRatio || 1, 2);
+        fxW = window.innerWidth; fxH = window.innerHeight;
+        fxCanvas.width = fxW * fxDpr; fxCanvas.height = fxH * fxDpr;
+        fxCanvas.style.width = fxW + 'px';
+        fxCanvas.style.height = fxH + 'px';
+        fxCtx.setTransform(fxDpr,0,0,fxDpr,0,0);
+      }
+      fxResize();
+      window.addEventListener('resize', fxResize);
+
+      function maybeSpawn(x, y){
+        const now = performance.now();
+        let vx = 0, vy = 0, speed = 0;
+        // Only spawn while actually moving, and only every SPAWN_INTERVAL ms
+        if (lastX !== null) {
+          const dx = x - lastX, dy = y - lastY;
+          const distSq = dx*dx + dy*dy;
+          if (distSq < 16) return; // ignore near-stationary jitter
+          const dist = Math.sqrt(distSq);
+          vx = dx / dist; vy = dy / dist;       // unit direction of motion
+          speed = Math.min(dist, 60);           // clamp so a huge jump doesn't blow things up
+        }
+        lastX = x; lastY = y;
+        if (now - lastSpawn < SPAWN_INTERVAL) return;
+        lastSpawn = now;
+        ripples.push({
+          x, y, age: 0,
+          angle: Math.atan2(vy, vx),              // direction of travel
+          stretch: 1 + Math.min(speed / 60, 1) * 0.35, // faster move = more elongated, stronger ripple
+          sizeMul: 0.85 + Math.min(speed / 60, 1) * 0.5, // faster move = bigger ripple
+          // a random "wobble fingerprint" so each ripple is a slightly
+          // different, organic shape instead of a perfect circle
+          seed: {
+            k1: 3 + Math.floor(Math.random() * 2),   // 3 or 4 lobes
+            k2: 6 + Math.floor(Math.random() * 3),   // finer ripple texture
+            amp1: 0.018 + Math.random() * 0.014,
+            amp2: 0.008 + Math.random() * 0.01,
+            phase1: Math.random() * Math.PI * 2,
+            phase2: Math.random() * Math.PI * 2
+          }
+        });
+        if (ripples.length > 6) ripples.shift();
+      }
+
+      window.addEventListener('mousemove', (e) => maybeSpawn(e.clientX, e.clientY), { passive: true });
+      window.addEventListener('touchmove', (e) => {
+        const t = e.touches && e.touches[0];
+        if (t) maybeSpawn(t.clientX, t.clientY);
+      }, { passive: true });
+
+      function drawOrganicRing(cx, cy, baseRadius, seed, color, lineWidth, angle, stretch){
+        const segments = 48;
+        fxCtx.beginPath();
+        for (let i = 0; i <= segments; i++) {
+          const a = (i / segments) * Math.PI * 2;
+          const wobble =
+            1 +
+            seed.amp1 * Math.sin(seed.k1 * a + seed.phase1) +
+            seed.amp2 * Math.sin(seed.k2 * a + seed.phase2);
+          const r = baseRadius * wobble;
+          // base point on a circle, then stretch along the travel direction
+          // to get a subtle egg/elongated shape — like a disturbance moving
+          // through water rather than a perfect dropped-stone circle
+          let lx = Math.cos(a) * r;
+          let ly = Math.sin(a) * r;
+          // rotate into travel-direction space, stretch the forward axis, rotate back
+          const ca = Math.cos(angle), sa = Math.sin(angle);
+          const rx = lx * ca + ly * sa;     // component along travel direction
+          const ry = -lx * sa + ly * ca;    // component perpendicular
+          const sx = rx * stretch;
+          const sy = ry;
+          const x = cx + (sx * ca - sy * sa);
+          const y = cy + (sx * sa + sy * ca);
+          if (i === 0) fxCtx.moveTo(x, y);
+          else fxCtx.lineTo(x, y);
+        }
+        fxCtx.closePath();
+        fxCtx.strokeStyle = color;
+        fxCtx.lineWidth = lineWidth;
+        fxCtx.stroke();
+      }
+
+      function drawRipples(){
+        fxCtx.clearRect(0, 0, fxW, fxH);
+
+        ripples.forEach(r => r.age += 1);
+        ripples = ripples.filter(r => r.age < MAX_AGE);
+
+        // soft watery glow on the lines instead of crisp vector strokes
+        fxCtx.shadowColor = 'rgba(63,126,116,0.45)';
+        fxCtx.shadowBlur = 2.2;
+
+        ripples.forEach(r => {
+          const t = r.age / MAX_AGE;           // 0 = fresh (near cursor), 1 = fully expanded (far)
+          // fast initial burst that quickly decelerates — real ripples shoot
+          // outward at first, then slow down as energy dissipates
+          const radius = MAX_RADIUS * r.sizeMul * easeOutExpo(t);
+          const alpha = Math.pow(1 - t, 1.8) * 0.28;          // strong near cursor, melts away with distance
+          // rings get thinner as they expand — energy spreading thinner over a larger front
+          const thinFactor = 1 - t * 0.7;
+
+          // 4 concentric rings, each a bit smaller and fainter, for real depth.
+          // Each uses the ripple's own wobble seed (with a slight per-ring
+          // twist) so they're irregular and organic rather than perfect circles.
+          const ringScales = [1, 0.78, 0.56, 0.34];
+          ringScales.forEach((scale, i) => {
+            const r2 = radius * scale;
+            if (r2 < 4) return;
+            const ringSeed = {
+              k1: r.seed.k1,
+              k2: r.seed.k2,
+              amp1: r.seed.amp1,
+              amp2: r.seed.amp2,
+              phase1: r.seed.phase1 + i * 0.6,
+              phase2: r.seed.phase2 + i * 0.9
+            };
+            drawOrganicRing(
+              r.x, r.y, r2, ringSeed,
+              `rgba(63,126,116,${alpha * (1 - i * 0.18)})`,
+              (1.3 - i * 0.15) * thinFactor,
+              r.angle, r.stretch
+            );
+          });
+        });
+
+        fxCtx.shadowBlur = 0;
+        requestAnimationFrame(drawRipples);
+      }
+
+      function easeOutExpo(t){
+        return t >= 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      requestAnimationFrame(drawRipples);
+    }
+  }
+
+  // Scrollspy: highlight nav link matching the section currently in view
+  const spyLinks = document.querySelectorAll('.nav-links a');
+  const spyTargets = Array.from(spyLinks)
+    .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+    .filter(Boolean);
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (match) {
+          spyLinks.forEach(a => a.classList.remove('active'));
+          match.classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  spyTargets.forEach(el => spyObserver.observe(el));
+
+  // Ambient bubble background (aeration / DAF inspired)
+  // Reusable engine so multiple sections can each have their own rising bubbles.
+  function createBubbleField(canvas, opts){
+    if (!canvas) return null;
+    opts = opts || {};
+    const tint = opts.tint || '111,150,134';
+    const maxCount = opts.maxCount || { small: 20, large: 40 };
+    const ctx = canvas.getContext('2d');
+    let bubbles = [];
+    let w, h, dpr;
+
+    function resize(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+
+    function makeBubble(){
+      return {
+        x: Math.random() * w,
+        y: h + Math.random() * 60,
+        r: 3 + Math.random() * 14,
+        speed: 0.25 + Math.random() * 0.7,
+        drift: (Math.random() - 0.5) * 0.4,
+        wobble: Math.random() * Math.PI * 2,
+        wobbleSpeed: 0.01 + Math.random() * 0.02,
+        alpha: 0.06 + Math.random() * 0.16
+      };
+    }
+
+    function initBubbles(){
+      const count = w < 700 ? maxCount.small : maxCount.large;
+      bubbles = Array.from({length: count}, () => {
+        const b = makeBubble();
+        // Stagger starting positions below the section so bubbles visibly
+        // rise up from the very bottom edge rather than appearing mid-air.
+        b.y = h + Math.random() * (h * 0.9);
+        return b;
+      });
+    }
+
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      bubbles.forEach(b => {
+        b.y -= b.speed;
+        b.wobble += b.wobbleSpeed;
+        b.x += Math.sin(b.wobble) * b.drift;
+        if (b.y < -b.r * 2) {
+          Object.assign(b, makeBubble());
+          b.y = h + b.r;
+        }
+        const grad = ctx.createRadialGradient(b.x - b.r*0.3, b.y - b.r*0.3, b.r*0.1, b.x, b.y, b.r);
+        grad.addColorStop(0, `rgba(255,255,255,${b.alpha + 0.18})`);
+        grad.addColorStop(0.5, `rgba(${tint},${b.alpha})`);
+        grad.addColorStop(1, `rgba(${tint},0)`);
+        ctx.beginPath();
+        ctx.fillStyle = grad;
+        ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(255,255,255,${b.alpha + 0.1})`;
+        ctx.lineWidth = 0.6;
+        ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+        ctx.stroke();
+      });
+      if (!reduced) requestAnimationFrame(draw);
+    }
+
+    function resync(){
+      resize();
+      initBubbles();
+    }
+
+    resync();
+    if (!reduced) {
+      requestAnimationFrame(draw);
+    } else {
+      draw(); // draw a single static frame
+    }
+
+    return { resync };
+  }
+
+  const heroField = createBubbleField(document.getElementById('bubbleCanvas'));
+  const contactField = createBubbleField(document.getElementById('bubbleCanvasContact'), {
+    tint: '244,246,242',
+    maxCount: { small: 10, large: 16 }
+  });
+
+  // Re-sync canvas dimensions once fonts/layout fully settle — the merged
+  // hero+about section's height can change slightly after web fonts swap
+  // in, and if the canvas's internal drawing height doesn't match its
+  // actual rendered height, bubbles appear to rise from the middle instead
+  // of the true bottom edge.
+  function resyncAllCanvases(){
+    if (heroField) heroField.resync();
+    if (contactField) contactField.resync();
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(resyncAllCanvases).catch(() => {});
+  }
+  window.addEventListener('load', resyncAllCanvases);
+  setTimeout(resyncAllCanvases, 400);
+  setTimeout(resyncAllCanvases, 1200);
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resyncAllCanvases, 150);
+  });
+</script>
+
+</body>
+</html>
