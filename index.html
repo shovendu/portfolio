@@ -544,10 +544,12 @@
     display:flex; gap: 22px; align-items: center;
   }
   .linkout-cover{
+    position: relative;
     flex: 0 0 90px;
     aspect-ratio: 3/4;
-    border: 1.5px dashed var(--line);
+    border: 1px solid var(--line);
     border-radius: 10px;
+    overflow: hidden;
     background: var(--surface-2);
     display:flex; flex-direction:column; align-items:center; justify-content:center;
     gap: 6px;
@@ -774,15 +776,7 @@
     </div>
     <div class="wrap about-grid" id="about">
       <div class="about-photo-frame reveal" id="aboutPhotoFrame">
-        <svg class="frame-waves" viewBox="0 0 200 240" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,90 C30,70 50,110 80,90 C110,70 130,110 160,90 C175,80 190,85 200,90 L200,240 L0,240 Z" fill="#9DC09E" opacity="0.55"/>
-          <path d="M0,130 C25,115 55,145 90,130 C120,117 145,148 175,132 C185,127 195,130 200,133 L200,240 L0,240 Z" fill="#7FAE85" opacity="0.55"/>
-          <path d="M0,170 C35,158 60,182 95,170 C125,160 150,185 200,172 L200,240 L0,240 Z" fill="#5E9468" opacity="0.6"/>
-        </svg>
-        <div class="frame-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M21 16l-5-4-4 3-3-2-5 4"/></svg>
-        </div>
-        <span>Photo coming soon</span>
+        <img src="https://cdn.jsdelivr.net/gh/shovendu/portfolio@main/profile.jpg" alt="Shovendu Biswas" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;"/>
       </div>
       <div class="about-text reveal">
         <p>I completed my B.Sc. in Applied Chemistry and Chemical Engineering and M.Sc. in Environmental Science from Jahangirnagar University. During my academic years I conducted research on industrial wastewater treatment and published findings in peer-reviewed international journals. I then began my journey in wastewater treatment plants in textile industries — nearly five years across ETP, WTP, MBR, RO and ZLD operation and management. My goal is to reduce water pollution from Bangladeshi industries as much as possible.</p>
@@ -806,8 +800,7 @@
 
         <div class="linkout-card split">
           <div class="linkout-cover" id="handbookCover">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 3v18"/></svg>
-            <span>Cover coming soon</span>
+            <img src="https://cdn.jsdelivr.net/gh/shovendu/portfolio@main/handbook-cover.jpg" alt="ETP Operation and Management Handbook cover" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;"/>
           </div>
           <div class="linkout-body">
             <h3>ETP Operation &amp; Management Handbook</h3>
@@ -818,14 +811,12 @@
 
         <div class="linkout-card split">
           <div class="linkout-cover" id="calcCover">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h2M8 15h2M12 15h2M16 15h2"/></svg>
-            <span>Cover coming soon</span>
+            <img src="https://cdn.jsdelivr.net/gh/shovendu/portfolio@main/calculator-cover.jpg" alt="ETP Calculators cover" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;"/>
           </div>
           <div class="linkout-body">
-            <span class="badge">Link coming soon</span>
-            <h3>ETP Calculators</h3>
+            <h3>ETP Performance Tracker</h3>
             <p>Working calculators for everyday ETP operations — dosing, retention time, and process ratios.</p>
-            <a href="#" id="calcLink" class="linkout-action">Open Calculators →</a>
+            <a href="https://shovendu.github.io/ETP-Performance-Tracker/" id="calcLink" class="linkout-action" target="_blank" rel="noopener">Open Calculators →</a>
           </div>
         </div>
 
